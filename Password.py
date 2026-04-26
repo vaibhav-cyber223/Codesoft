@@ -1,23 +1,19 @@
-# Step 1: Import the modules we need
+# Password generator
+
 import random
 import string
 
-# Step 2: Ask the user how long the password should be
-length = int(input("Enter the length of the password: "))
+length = int(input("The length of the password :"))
 
-# Step 3: Create a pool of characters to choose from
-letters = string.ascii_letters   # a-z and A-Z
-digits = string.digits           # 0-9
-symbols = string.punctuation     # special characters like !, @, #
+character = string.ascii_letters
+digit = string.digits
+symbol = string.punctuation
 
-characters = letters + digits + symbols
+Total = character+ digit + symbol
 
-# Step 4: Make an empty password string
 password = ""
 
-# Step 5: Pick random characters one by one
 for i in range(length):
-    password = password + random.choice(characters)
+    password = password + random.choice(Total)
 
-# Step 6: Show the final password
-print("Your password is:", password)
+print("The password  is :",password)
